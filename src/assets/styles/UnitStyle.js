@@ -808,3 +808,24 @@ export const PaginationStyle = styled.div`
     }
   }
 `
+
+
+export const ToggleSwitchStyle = styled.div`
+  width: 50px;
+  height: 25px;
+  border-radius: 15px;
+  background-color: ${(props) => (props.isOn ? "#4caf50" : "#ccc")};
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  .bbb {
+    width: 23px;
+    height: 23px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 1px;
+    left: ${(props) => (props.isOn ? "calc(100% - 24px)" : "1px")};
+    transition: left 0.3s;
+  }
+`

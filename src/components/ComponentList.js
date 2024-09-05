@@ -16,6 +16,7 @@ const ComponentList = () => {
       { id: 'select', title: 'Select'},
       { id: 'tab', title: 'Tab'},
       { id: 'pagination', title: 'Pagination'},
+      { id: 'toggleswitch', title: 'ToggleSwitch'},
     ]
   })
 
@@ -195,7 +196,20 @@ const ComponentList = () => {
                 <br />
                 경로 입력
               </div>
-            ) : (
+            ) : tabMenu.active === 'toggleswitch' ? (
+            <div
+              style={{
+                fontSize: '16px',
+                fontWeight: '500',
+                padding: '20px',
+                backgroundColor: '#f4f4f4'
+              }}
+            >
+              <span style={{fontWeight:700, color:"orange"}}>import경로</span>
+              <br />
+              경로 입력
+            </div>
+          ) : (
             <div
               style={{
                 fontSize: '16px',

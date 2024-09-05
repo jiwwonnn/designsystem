@@ -11,6 +11,8 @@ import Checkbox from '../components/units/Checkbox';
 import Select from '../components/units/Select';
 import TabMenu from '../components/units/TabMenu';
 import Pagination from '../components/units/Pagination';
+import ToggleSwitch from '../components/units/ToggleSwitch';
+
 
 
 
@@ -67,6 +69,12 @@ const ComponentConfig = () => {
   // pagination
   const handlePaging = async (param) => {
     console.log("handlePaging-->", param);
+  };
+
+  const [isOn, setIsOn] = useState(false);
+
+  const handleActive = () => {
+    setIsOn(!isOn);
   };
 
 
@@ -628,6 +636,26 @@ const ComponentConfig = () => {
             }}
             handlePaging={handlePaging} //페이지네이션 클릭 액션값
           />
+        </>
+      )
+    },
+
+    /******************************************************************************************************************************
+     * toggleSwitch 토글 스위치
+     ******************************************************************************************************************************/
+    {
+      group: `toggleswitch`,
+      componentCode: (
+        <SyntaxHighlighter language="javascript" style={dark}>
+          {`
+        {/** 기본 **/}
+        <ToggleSwitch isOn={isOn} handleActive={handleActive} />
+        `}
+        </SyntaxHighlighter >
+      ),
+      render: (
+        <>
+          <ToggleSwitch isOn={isOn} handleActive={handleActive} />
         </>
       )
     },
