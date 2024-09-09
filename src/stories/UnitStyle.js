@@ -650,7 +650,7 @@ export const ToggleSwitchStyle = styled.div`
   position: relative;
   cursor: pointer;
   transition: background-color 0.3s;
-  .bbb {
+  .switch_thumb {
     width: 23px;
     height: 23px;
     background-color: white;

@@ -9,7 +9,7 @@ export const ToggleSwitch = (props) => {
 
   return (
     <ToggleSwitchStyle isOn={isOn} onClick={handleActive}>
-      <div className="bbb">&nbsp;</div>
+      <div className="switch_thumb">&nbsp;</div>
     </ToggleSwitchStyle>
   );
 };
